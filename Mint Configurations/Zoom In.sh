@@ -1,0 +1,2 @@
+xdotool keydown Alt click 4 keyup Alt
+
