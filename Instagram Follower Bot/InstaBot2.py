@@ -32,6 +32,7 @@ print('Logged in to Instagram')
 
 random.seed(time.time())
 
+
 def looper(d, master_count=0):
     print('Going to Explore page')
     explore = d.find_element(By.CSS_SELECTOR, "svg[aria-label='Explore'")
@@ -179,6 +180,8 @@ while (lv <100):
     print('Looper count: ', str(lv))   
 
 print('Done!')
+
+
 
 
 
