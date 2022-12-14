@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Initial
 #while :; do
 #    [ $(xprintidle) -lt 3 ] && echo Hello\ World
@@ -38,10 +40,19 @@
 #done
 
 
+trap 'echo Turn Off Idle Screen Stopped' EXIT
 
+
+
+echo Turn Off Idle Screen Running
 
 while :; do
     now=$(date +"%T")
     [ $(xprintidle) -gt 60000 ] && bash -c "sleep 1; xset -display $DISPLAY dpms force off"
     sleep 60;
 done
+
+
+
+
+#echo Turn Off Idle Screen Stopped

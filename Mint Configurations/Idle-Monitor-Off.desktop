@@ -1,0 +1,19 @@
+#!/bin/bash
+while :; do
+    now=$(date +"%T")
+    [ $(xprintidle) -gt 60000 ] && echo hello world $DISPLAY dpms force off"
+    sleep 60;
+done
+
+#xdotool sleep 0.100 keydown Alt sleep 0.100 click 4 sleep 0.100 keyup Alt
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=script
+Comment=
+Exec="/home/scarlet/Documents/Mint\ Configurations/Test.sh"
+Icon=
+Path=
+Terminal=true
+StartupNotify=false
+

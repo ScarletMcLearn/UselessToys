@@ -1,0 +1,2 @@
+In bashrc file - nano ~/.bashrc 
+Do NOT add space before and after = and ' 's 
