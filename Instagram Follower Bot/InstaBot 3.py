@@ -33,8 +33,11 @@ print('Logged in to Instagram')
 
 random.seed(time.time())
 
-def looper(d, master_count=0):
+
+
+def looper(d):
     global lv 
+    global master_count
     print('Going to Explore page')
     explore = d.find_element(By.CSS_SELECTOR, "svg[aria-label='Explore'")
     explore.click()
@@ -121,8 +124,8 @@ def looper(d, master_count=0):
             if b.text == 'Follow':
                 b.click()
 #                print('Followed ', str(lv+1), ' account(s)') 
-                print('Master Followed ', str(master_count+1), ' account(s)')      
-                master_count = master_count + 1
+#                print('Master Followed ', str(master_count+1), ' account(s)')      
+#                master_count = master_count + 1
     #            d.back()
                 time.sleep(10)
 #                time.sleep(60)
@@ -145,6 +148,8 @@ def looper(d, master_count=0):
         #
         lv = lv + 1
         count = count + 1
+        print('Master Followed ', str(master_count+1), ' account(s)')      
+        master_count = master_count + 1
 #        master_count = master_count + 1
     print('Master count: ', str(master_count))
     return master_count
@@ -184,7 +189,6 @@ while (lv <600):
     print('Looper count: ', str(tmp_lv))   
 
 print('Done!')
-
 
 
 
