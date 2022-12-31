@@ -48,8 +48,8 @@ echo Turn Off Idle Screen Running
 
 while :; do
     now=$(date +"%T")
-    [ $(xprintidle) -gt 60000 ] && bash -c "sleep 1; xset -display $DISPLAY dpms force off"
-    sleep 60;
+    [ $(xprintidle) -gt 10000 ] && bash -c "sleep 1; xset -display $DISPLAY dpms force off"
+    sleep 10;
 done
 
 
