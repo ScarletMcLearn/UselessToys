@@ -15,11 +15,11 @@ username = d.find_element(By.NAME, 'username')
 
 username.clear()
 
-username.send_keys('ScarletMcLearn')
+username.send_keys('username')
 
 password = d.find_element(By.NAME, 'password')
 
-password.send_keys('+9003517+')
+password.send_keys('password')
 
 submit = d.find_element(By.XPATH, '//button[@type="submit"]')
 submit.click()
